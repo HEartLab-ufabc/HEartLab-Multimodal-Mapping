@@ -1,0 +1,50 @@
+{
+    "f1": {
+        "command": "START_CONTINUOUS",
+        "description": "Start S0 (Continuous Stimulation)"
+    },
+    "f2": {
+        "command": "STOP_CONTINUOUS",
+        "description": "Stop S0"
+    },
+    "f3": {
+        "command": "START_BURST",
+        "description": "Start Burst (S1-S2 Protocol)"
+    },
+    "f4": {
+        "command": "None",
+        "description": "--"
+    },
+    "f5": {
+        "command": "SET_SYNC 2 500 0 50 ON",
+        "description": "Start TTL"
+    },
+    "f6": {
+        "command": "SET_SYNC 2 500 0 50 OFF",
+        "description": "Stop TTL"
+    },
+    "f7": {
+        "command": "None",
+        "description": "--"
+    },
+    "f8": {
+        "command": "None",
+        "description": "--"
+    },
+    "f9": {
+        "command": "None",
+        "description": "--"
+    },
+    "f10": {
+        "command": "None",
+        "description": "--"
+    },
+    "f11": {
+        "command": "None",
+        "description": "--"
+    },
+    "f12": {
+        "command": "None",
+        "description": "--"
+    }
+}
