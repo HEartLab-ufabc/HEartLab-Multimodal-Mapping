@@ -6,13 +6,13 @@ The firmware is separated according to hardware function.
 
 ## Directory structure
 
-### `sensor_node/`
+### `sensors/`
 
 Firmware for the Arduino Nano nodes associated with individual perfusion lines.
 
 The nodes acquire local sensor measurements and transmit them wirelessly to the gateway.
 
-### `sensor_gateway/`
+### `gateway/`
 
 Firmware for the ESP32-S3 gateway.
 
