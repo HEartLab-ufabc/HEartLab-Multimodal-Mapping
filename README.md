@@ -29,7 +29,7 @@ The platform has been implemented in three principal configurations.
 
 ### Small-heart whole-organ configuration
 
-Developed for Langendorff-perfused rabbit hearts and supporting, depending on the experiment:
+Developed for Langendorff-perfused small hearts and supporting, depending on the experiment:
 
 - panoramic optical mapping using multiple camera views;
 - epicardial contact mapping using MEAs;
@@ -57,7 +57,6 @@ Developed for intact porcine and human ex vivo hearts and supporting, depending 
 Developed for isolated perfused ventricular-wall preparations and supporting, depending on the experiment:
 
 - simultaneous optical mapping of epicardial and endocardial surfaces;
-- simultaneous contact-electrical recordings from opposing surfaces;
 - paired epicardial and endocardial MEAs;
 - mirror-assisted optical access;
 - synchronized stimulation and acquisition;
@@ -104,6 +103,7 @@ HEartLab-Multimodal-Mapping/
 ├── firmware/
 │   ├── sensors/
 │   ├── gateway/
+│   ├── stepper_motor_control/
 │   └── synchronization_controller/
 │
 ├── hardware/
@@ -194,7 +194,7 @@ The CAD library is organized according to the experimental configuration in whic
 
 The majority of the supplied CAD files correspond to **custom components that must be fabricated or 3D printed**.
 
-Commercial and off-the-shelf components, such as motors, bearings, pulleys, belts, shafts, fasteners, clamps, and standard mechanical hardware, are identified in the corresponding documentation and assembly drawings but their proprietary CAD models are generally not redistributed.
+Commercial and off-the-shelf components, such as motors, bearings, pulleys, belts, shafts, fasteners, clamps, and standard mechanical hardware, are identified in the corresponding documentation, but their proprietary CAD models are generally not redistributed.
 
 Where available, designs are provided in multiple formats:
 
