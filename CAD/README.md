@@ -4,7 +4,7 @@ This directory contains mechanical design files for custom components used in th
 
 The designs are organized according to the experimental configuration in which they were developed:
 
-- [`small-heart/`](small-heart/) – components used with the small-heart whole-organ configuration;
+- [`small_heart/`](small_heart/) – components used with the small-heart whole-organ configuration;
 - [`large-heart/`](large-heart/) – components used with the large-heart whole-organ configuration;
 - [`epi-endo/`](epi-endo/) – components used with the large-heart epi-endo configuration.
 

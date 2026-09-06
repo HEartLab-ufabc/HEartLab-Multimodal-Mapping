@@ -1,62 +1,104 @@
 # Hardware
 
-This directory contains documentation and design information for the hardware components of the multimodal ex vivo cardiac mapping platform.
+This directory contains documentation and design information for the hardware used in the HEartLab multimodal ex vivo cardiac mapping platform.
 
-The platform is modular. Not every hardware module is required for every experiment, and several components are changed or resized depending on whether the platform is being used for a small-heart whole-organ, large-heart whole-organ, or large-heart epi-endo preparation.
+The platform is modular. A particular experiment does not require every module, and some mechanical, perfusion, optical, and electrical interfaces change according to preparation size and scientific objective.
 
 ## Hardware modules
 
+```text
+hardware/
+├── README.md
+├── BOM_overview.md
+├── perfusion/
+├── physiological_monitoring/
+├── optical_mapping/
+├── electrical_mapping/
+├── stimulation/
+├── synchronization/
+├── mechanical/
+└── reconstruction_3d/
+```
+
 ### `perfusion/`
 
-Perfusion architecture, fluidic connections, cannulation interfaces, reservoirs, heat exchangers and associated components.
+Perfusion architecture, reservoirs, pumps, tubing, heat exchange, bubble management, flow monitoring, pressure monitoring, and cannulation interfaces.
 
 ### `physiological_monitoring/`
 
-Sensors and embedded hardware used to monitor perfusion pressure, flow and temperature.
+Sensor nodes and gateway hardware used to monitor perfusion flow, pressure, and temperature.
 
 ### `optical_mapping/`
 
-Illumination arrangement, optical filters, cameras, lenses, mounting considerations and synchronization interfaces used for voltage-sensitive optical mapping.
+Cameras, lenses, excitation illumination, emission filtering, mirror-assisted views, and hardware interfaces used for voltage-sensitive optical mapping.
 
 ### `electrical_mapping/`
 
-Contact-electrical and torso-tank recording interfaces, including MEAs, tank electrodes and associated acquisition connections.
+Contact-electrical mapping and torso-tank mapping hardware, including MEAs, small-heart tank electrodes, large-heart tank PCBs, acquisition interfaces, and channel organization.
 
 ### `stimulation/`
 
-Electrical stimulation hardware and interfaces used for pacing and arrhythmia-induction protocols.
+Electrical stimulation hardware used for pacing and arrhythmia-induction protocols.
 
 ### `synchronization/`
 
-Hardware timing and triggering interfaces used to maintain a common temporal reference between acquisition systems.
+Hardware timing interfaces used to provide a common temporal reference between optical and electrical acquisition systems.
 
 ### `mechanical/`
 
-Mechanical supports, holders, mounts and interfaces used to position the cardiac preparation and experimental equipment.
+A guide to mechanical hardware and the corresponding CAD repository. Detailed custom mechanical designs are maintained under [`../cad/`](../cad/) rather than duplicated here.
 
 ### `reconstruction_3d/`
 
-Mechanical hardware used for rotational image acquisition and experiment-specific three-dimensional reconstruction.
+Motorized rotational hardware and imaging components used to acquire multi-view images for experiment-specific 3D reconstruction.
+
+## Configuration overview
+
+The table below summarizes the typical relationship between hardware modules and the three principal platform configurations.
+
+| Module | Small-heart whole-organ | Large-heart whole-organ | Large-heart epi-endo |
+|---|---|---|---|
+| Perfusion | Aortic/Langendorff | Independent coronary perfusion | Coronary perfusion |
+| Physiological monitoring | Used as required | Used as required | Used as required |
+| Optical mapping | Panoramic multi-camera | Large-surface multi-camera | Dual-surface / mirror-assisted |
+| Contact electrical mapping | Epicardial MEAs | Experiment dependent | Epicardial + endocardial MEAs |
+| Torso-tank mapping | 60-electrode tank implementation | Six-face tank PCB implementation | Not a defining module |
+| Electrical stimulation | Experiment dependent | Experiment dependent | Experiment dependent |
+| Synchronization | When multimodal acquisition is used | When multimodal acquisition is used | When multimodal acquisition is used |
+| 3D reconstruction hardware | Experiment dependent | Experiment dependent | Experiment dependent |
+
+The table describes representative HEartLab implementations and should not be interpreted as a mandatory experimental sequence.
 
 ## Design philosophy
 
-The hardware was developed around common experimental functions rather than a fixed physical arrangement.
+The hardware was developed around experimental functions rather than a single fixed physical arrangement.
 
-For example, the perfusion interface differs substantially between a Langendorff-perfused rabbit heart and an independently coronary-perfused large heart. Similarly, the dimensions and arrangement of optical and electrical interfaces depend on preparation size.
+Common design goals include:
 
-Despite these differences, the same general functions are retained:
+- maintaining controlled perfusion;
+- preserving optical and electrical access to the preparation;
+- monitoring relevant physiological conditions;
+- enabling programmable stimulation where required;
+- acquiring complementary electrical and optical measurements;
+- providing a common timing reference between acquisition systems;
+- allowing adaptation to different preparation dimensions.
 
-- maintain controlled perfusion;
-- preserve optical and electrical access;
-- monitor preparation conditions;
-- provide stimulation when required;
-- acquire complementary mapping modalities;
-- synchronize the acquired signals.
+## Documentation convention
+
+Each hardware directory contains, where applicable:
+
+- a subsystem overview;
+- representative bill of materials;
+- configuration-specific notes;
+- links to firmware or software;
+- links to CAD files;
+- fabrication/manufacturing files;
+- operating notes, limitations, and compatibility information.
+
+Commercial components are identified to support reproducibility but their proprietary design files are not redistributed.
 
 ## Important
 
-Dimensions and component specifications provided here correspond to hardware used during development of the platform unless otherwise indicated.
+The listed hardware corresponds to HEartLab implementations used during platform development. Exact component models, dimensions, calibration, electrical limits, and material compatibility must be independently verified before use.
 
-Some components are custom manufactured and may require adaptation to the available equipment, preparation dimensions or fabrication methods of another laboratory.
-
-Commercial equipment referenced in this repository is not distributed with the repository and remains subject to the manufacturer's specifications and licensing conditions.
+See the repository-level [`DISCLAIMER.md`](../DISCLAIMER.md).

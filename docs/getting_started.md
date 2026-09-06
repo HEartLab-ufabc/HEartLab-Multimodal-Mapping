@@ -4,7 +4,7 @@ This guide provides a high-level workflow for reproducing, adapting, or operatin
 
 The platform is modular. A laboratory does **not** need to reproduce every subsystem or experimental configuration described in this repository. The recommended approach is to first select the preparation and scientific objective, then select the required platform modules and experiment-specific protocols, and finally assemble and validate those components before use with a biological preparation.
 
-> **Documentation status:** This repository is under active development. Detailed bills of materials, wiring diagrams, calibration procedures, and configuration-specific assembly instructions are being added progressively. Where detailed instructions are not yet available, consult the corresponding subsystem README together with the associated publication.
+> **Documentation status:** This repository is under active development. Detailed bills of materials, wiring diagrams, calibration procedures, and configuration-specific assembly instructions are being added progressively. Where detailed instructions are not yet available, consult the corresponding subsystem README together with the associated publication, or contact the authors for a more detailed explanation.
 
 ---
 
@@ -77,9 +77,7 @@ Examples of experiment-specific decisions include:
 
 Therefore, do not interpret the documentation as a single mandatory protocol that must be followed identically for every experiment.
 
-For small-heart protocols, see:
-
-[`protocols/small_heart/`](protocols/small_heart/)
+Representative experimental protocols are available in [`protocols/`](protocols/).
 
 ---
 
@@ -136,7 +134,7 @@ Mechanical design files are located in:
 
 [`../cad/`](../cad/)
 
-Detailed bills of materials should identify manufacturer, model, quantity, specification, and substitution information for components used during platform validation.
+Subsystem bills of materials and component information are provided under [`../hardware/`](../hardware/).
 
 ---
 
@@ -144,19 +142,11 @@ Detailed bills of materials should identify manufacturer, model, quantity, speci
 
 Protocols are organized separately from hardware and software documentation because they can vary according to experimental goal.
 
-For the small-heart configuration, protocols are divided into:
-
-- **core protocols** — procedures associated with fundamental preparation or platform operation;
-- **optional protocols** — interventions used only for specific scientific objectives;
-- **templates** — reusable planning, recording, and quality-control forms.
-
-See:
+Representative protocols, planning documents, recording forms, and experimental examples are available in:
 
 [`protocols/`](protocols/)
 
-and:
-
-[`protocols/small_heart/`](protocols/small_heart/)
+The files document implementations used in HEartLab experiments and are not intended to define a single mandatory workflow for all preparations.
 
 Before using a protocol, verify that it corresponds to the intended preparation, experiment, ethical approval, and current validated laboratory procedure.
 
@@ -367,11 +357,7 @@ Before each experiment, document:
 - tissue-processing requirements, if any;
 - criteria for optional procedures such as 3D reconstruction.
 
-Use the planning templates in:
-
-[`protocols/small_heart/templates/`](protocols/small_heart/templates/)
-
-for small-heart experiments.
+Use the representative experiment-planning documents in [`protocols/`](protocols/) as a basis for recording the experiment-specific configuration.
 
 ---
 

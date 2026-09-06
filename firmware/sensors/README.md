@@ -51,7 +51,7 @@ Data transmitted by this firmware are received by the ESP32-S3 gateway.
 
 See:
 
-[`../sensor_gateway/`](../sensor_gateway/)
+[`../gateway/`](../gateway/)
 
 ## Adaptation
 
