@@ -275,6 +275,22 @@ This repository accompanies:
 
 ---
 
+## License
+
+This repository uses a **multi-license structure**:
+
+| Material | License |
+|---|---|
+| Original software and firmware | MIT License |
+| Original hardware and CAD designs | CERN Open Hardware Licence Version 2 – Permissive |
+| General documentation and experimental protocols | Creative Commons Attribution 4.0 International |
+| Third-party components | Original third-party licenses |
+
+See [`LICENSE.md`](LICENSE.md) for the complete scope and
+[`THIRD_PARTY.md`](THIRD_PARTY.md) for third-party exceptions.
+
+---
+
 ## Third-party components
 
 Third-party software remains subject to its original license terms.
